@@ -16,6 +16,9 @@
     -o-transition: all ease .4s;
 }
 
+section {
+    margin-bottom: 50px;
+}
 
 .container {
     display: grid;
@@ -220,7 +223,7 @@ i.menu-btn {
         -moz-transition: all ease .3s;
         -ms-transition: all ease .3s;
         -o-transition: all ease .3s;
-}
+    }
 
 
     .menu nav ul li a.active {
@@ -233,6 +236,7 @@ i.menu-btn {
     .menu nav ul li a:hover {
         background-color: #00e36e35;
     }
+
     .menu nav ul li a.active:hover {
         background-color: #00a550;
     }
@@ -306,6 +310,12 @@ i.menu-btn {
 /* Large Desktops */
 @media (min-width: 1441px) {}
 
+
+/* ------------------------------------------------------ */
+/* -------------                            ------------- */
+/* -------------           landing          ------------- */
+/* -------------                            ------------- */
+/* ------------------------------------------------------ */
 
 section {
     height: 600px;
@@ -522,3 +532,112 @@ section.landing .right img {
 
 /* Large Desktops */
 @media (min-width: 1441px) {}
+
+
+/* ------------------------------------------------------ */
+/* -------------                            ------------- */
+/* -------------      select-location       ------------- */
+/* -------------                            ------------- */
+/* ------------------------------------------------------ */
+
+.select-location {
+    height: auto;
+    margin-bottom: 0;
+    padding: 0 70px;
+}
+.select-location-content .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 10px 30px;
+}
+
+.select-location-content .header h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.select-location-content .header button {
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.select-location-content .header button span{
+    margin-right: 5px;
+}
+
+/* ------------------------------------------------------ */
+/* -------------                            ------------- */
+/* -------------      prayer-timing         ------------- */
+/* -------------                            ------------- */
+/* ------------------------------------------------------ */
+
+.prayer-timing {
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    /* padding: 30px 0; */
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding: 0 70px;
+    background: linear-gradient(to right, rgb(235, 235, 235) 20%, white);
+}
+
+
+.prayer-timing-content .body {
+    display: flex;
+}
+
+.prayer-timing-content .body .left {
+    width: 40%;
+    padding-top: 70px;
+}
+
+.prayer-timing-content .body .left h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.prayer-timing-content .body .left p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.707);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.prayer-timing-content .body .left button {
+    padding: 10px 15px;
+    background-color: var(--button-color);
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+
+
+.prayer-timing-content .body .right {
+    width: 60%;
+}
+
+.prayer-timing-content .body .right {
+    padding: 20px;
+}
