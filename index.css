@@ -32,7 +32,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #eee;
+    margin-bottom: 10px;
     padding: 15px;
     position: relative;
 }
@@ -123,9 +123,9 @@ i.menu-btn {
         -moz-transition: all ease .3s;
         -ms-transition: all ease .3s;
         -o-transition: all ease .3s;
-}
-    
-    
+    }
+
+
     .donate-btn {
         display: none;
     }
@@ -152,6 +152,7 @@ i.menu-btn {
         -moz-border-radius: 6px;
         -ms-border-radius: 6px;
         -o-border-radius: 6px;
+        z-index: 999999;
     }
 
 
@@ -166,6 +167,39 @@ i.menu-btn {
 
 /* Mobile Devices (Landscape) */
 @media (min-width: 481px) and (max-width: 767px) {
+
+    header {
+        padding: 15px 5px;
+    }
+    nav.main-nav a {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    nav.main-nav ul {
+        gap: 7px;
+    }
+
+    .donate-btn button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .logo i {
+        font-size: 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .donate-btn {
+        display: none;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
     nav.main-nav a {
         padding: 10px 0;
         font-size: 16px;
@@ -189,11 +223,6 @@ i.menu-btn {
     }
 }
 
-/* Tablets (Portrait) */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
 /* Tablets (Landscape) */
 @media (min-width: 1025px) and (max-width: 1280px) {}
 
@@ -203,41 +232,209 @@ i.menu-btn {
 /* Large Desktops */
 @media (min-width: 1441px) {}
 
-/* 
+
 section {
-    height: 80vh;
-}
-section.landing {
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    height: 600px;
 }
 
-section.landing .right {
+section.landing {
+    height: 500px;
     width: 100%;
+    display: flex;
+    background: rgb(1, 145, 71);
+    background: linear-gradient(90deg, rgba(1, 145, 71, 1) 0%, rgba(3, 147, 73, 1) 21%, rgba(5, 173, 87, 1) 58%, rgba(5, 175, 87, 1) 79%, rgba(4, 200, 99, 1) 91%, rgba(2, 222, 109, 1) 100%);
+    padding: 0px 70px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+section.landing .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+section.landing .left h1 {
+    font-size: 45px;
+    color: #fff;
+}
+
+.break-text {
+    display: inline-block;
+    position: relative;
+}
+
+.break-text::after {
+    content: "In The Name Of Allah, \A The Creator Of The \A Universe";
+    white-space: pre;
+}
+
+
+section.landing .left p {
+    font-size: 16px;
+    color: #ffffffbc;
+    margin-bottom: 10px;
+}
+
+section.landing .left button {
+    padding: 13px;
+    color: #fff;
+    font-weight: 600;
+    align-self: flex-start;
+    background-color: var(--button-color);
+    border: none;
+    box-shadow: rgba(88, 88, 88, 0.35) 0px 5px 15px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+}
+
+
+section.landing .right {
+    width: 50%;
+    padding: 20px;
 }
 
 section.landing .right img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-} */
+    object-fit: contain;
+}
 
 
 /* Small Mobile Devices (Portrait) */
 @media (max-width: 480px) {
+    section.landing {
+        position: relative;
+        padding: 0px 20px;
+        background-color: #019147;
+        overflow: hidden;
+        border-radius:0 ;
+        -webkit-border-radius:0 ;
+        -moz-border-radius:0 ;
+        -ms-border-radius:0 ;
+        -o-border-radius:0 ;
+}
 
+    section.landing::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url('./img/01-1-1.png') center/contain no-repeat;
+        opacity: 0.3; /* Control the opacity of the image */
+    }
+
+    section.landing .left {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+
+    section.landing .left h1 {
+        font-size: 30px;
+    }
+
+    section.landing .left p {
+        font-size: 12px;
+    }
+
+    section.landing .right {
+        display: none;
+    }
 }
 
 /* Mobile Devices (Landscape) */
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 920px) {
+    section.landing {
+        position: relative;
+        padding: 0px 40px;
+        background-color: #019147;
+        overflow: hidden;
+    }
 
+    section.landing::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url('./img/01-1-1.png') center/contain no-repeat;
+        opacity: 0.3; /* Control the opacity of the image */
+    }
+    section.landing .left {
+        width: 70%;
+        position: relative;
+        z-index: 2;
+    }
+
+
+    section.landing .left h1 {
+        font-size: 40px;
+    }
+
+    section.landing .left p {
+        font-size: 15px;
+    }
+
+    section.landing .right {
+        display: none;
+    }
 }
 
 /* Tablets (Portrait) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    
+/* @media (min-width: 768px) and (max-width: 1024px) {
+
+    section.landing {
+        padding: 0px 60px;
+    }
+
+    section.landing .left h1 {
+        font-size: 40px;
+    }
+
+} */
+
+/* Tablets (Portrait) */
+/* @media (min-width: 769px) and (max-width: 920px) {
+
+    section.landing {
+        padding: 0px 60px;
+    }
+
+    section.landing .left h1 {
+        font-size: 40px;
+    }
+
+} */
+
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {
+
+    section.landing {
+        padding: 0px 50px;
+    }
+
+    section.landing .left h1 {
+        font-size: 37px;
+    }
+
+    section.landing .left p {
+        font-size: 13px;
+    }
+
 }
 
 /* Tablets (Landscape) */
