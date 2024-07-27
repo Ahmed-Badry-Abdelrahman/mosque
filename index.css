@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #019147;
+    --secondary-color: #e6f8ef;
+    --button-color: #ff9822;
+    --primary-transition: transition: all ease .4s;
+    -webkit-transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    -ms-transition: all ease .4s;
+    -o-transition: all ease .4s;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: '. content content content content content content content content content content .';
+}
+
+.content {
+    grid-area: content;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 15px;
+    position: relative;
+}
+
+nav.main-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+
+}
+
+a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid #019147;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.donate-btn button {
+    background-color: var(--button-color);
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate-btn button:hover {
+    background-color: #fb9017;
+}
+
+
+.menu {
+    display: none;
+}
+
+i.menu-btn {
+    display: none;
+}
+
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'content content content content content content content content content content content content';
+    }
+
+    i.menu-btn {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all ease .3s;
+        -webkit-transition: all ease .3s;
+        -moz-transition: all ease .3s;
+        -ms-transition: all ease .3s;
+        -o-transition: all ease .3s;
+}
+    
+    
+    .donate-btn {
+        display: none;
+    }
+
+    nav.main-nav {
+        display: none;
+    }
+
+    .menu.active {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: aqua;
+        width: 80vw;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        padding: 20px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+    }
+
+
+    .menu nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu nav ul li {}
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+    nav.main-nav a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    nav.main-nav ul {
+        gap: 10px;
+    }
+
+    .donate-btn button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .logo i {
+        font-size: 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
+
+/* 
+section {
+    height: 80vh;
+}
+section.landing {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+
+section.landing .right {
+    width: 100%;
+}
+
+section.landing .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
