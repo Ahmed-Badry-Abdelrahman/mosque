@@ -1063,7 +1063,9 @@ section.services {
     color: #fff;
     cursor: pointer;
 }
-
+.services .services-content .services-left-text button:hover {
+    background-color: #fb9017;
+}
 
 .services .services-content .services-right-cards {
     width: 60%;
