@@ -548,7 +548,8 @@ section.landing .right img {
 .select-location-content .header {
     display: flex;
     justify-content: space-between;
-    padding: 30px 30px 10px 30px;
+    align-items: center;
+    padding: 30px ;
 }
 
 .select-location-content .header h2 {
@@ -575,6 +576,58 @@ section.landing .right img {
     margin-right: 5px;
 }
 
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+    .select-location {
+        padding: 0 ;
+    }
+
+    .select-location-content .header h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    .select-location {
+        padding: 0  20px ;
+    }
+
+    .select-location-content .header h2 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .select-location {
+        padding: 0 70px ;
+    }
+
+    .select-location-content .header h2 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {}
+
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
+
 /* ------------------------------------------------------ */
 /* -------------                            ------------- */
 /* -------------      prayer-timing         ------------- */
@@ -582,6 +635,7 @@ section.landing .right img {
 /* ------------------------------------------------------ */
 
 .prayer-timing {
+    height: auto;
     background-color: #FFF;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     /* padding: 30px 0; */
@@ -632,8 +686,6 @@ section.landing .right img {
     -o-border-radius: 4px;
 }
 
-
-
 .prayer-timing-content .body .right {
     width: 60%;
 }
@@ -641,3 +693,231 @@ section.landing .right img {
 .prayer-timing-content .body .right {
     padding: 20px;
 }
+
+.prayer-timing-content .body .right table {
+    width: 100%;
+    text-align: center;
+    border-spacing:20px ;
+}
+
+.prayer-timing-content .body .right table td {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.prayer-timing-content .body .right table th p {
+    font-size: 20px;
+    font-weight: 700;
+}
+.prayer-timing-content .body .right table th img {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.prayer-timing-content .body .right table td img {
+    width: 25px;
+    
+}
+
+.prayer-timing-content .body .right table tr td:first-of-type  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+    .prayer-timing {
+        padding: 0;
+    }
+    .prayer-timing .prayer-timing-content .body .left {
+        display: none;
+    }
+    .prayer-timing .prayer-timing-content .body .right {
+        width: 100%;
+    }
+    .prayer-timing-content .body .right table tr td:first-of-type  {
+        padding-left: 10px;
+    }
+    .prayer-timing-content .body .right table th p {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .prayer-timing-content .body .right {
+        overflow-x: auto;
+    }
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    .prayer-timing {
+        padding: 0;
+    }
+    .prayer-timing .prayer-timing-content .body .left {
+        display: none;
+    }
+    .prayer-timing .prayer-timing-content .body .right {
+        width: 100%;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .prayer-timing .prayer-timing-content .body .left {
+        display: none;
+    }
+    .prayer-timing .prayer-timing-content .body .right {
+        width: 100%;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {}
+
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {
+    .prayer-timing .prayer-timing-content .body .left {
+        display: none;
+    }
+    .prayer-timing .prayer-timing-content .body .right {
+        width: 100%;
+    }
+}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {}
+
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
