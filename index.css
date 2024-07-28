@@ -738,6 +738,11 @@ section.landing .right img {
 @media (max-width: 480px) {
     .prayer-timing {
         padding: 0;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
     }
     .prayer-timing .prayer-timing-content .body .left {
         display: none;
@@ -805,15 +810,183 @@ section.landing .right img {
 
 
 
+/* ------------------------------------------------------ */
+/* -------------                            ------------- */
+/* -------------     about-islam            ------------- */
+/* -------------                            ------------- */
+/* ------------------------------------------------------ */
+
+.about-islam {
+    background-color: var(--secondary-color);
+    height: auto;
+    padding: 0 70px;
+    margin-top: 140px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.about-islam .about-islam-content {
+    display: flex;
+    gap: 30px;
+}
+
+.about-islam .about-islam-content .about-islam-left-video {
+    padding: 10px;
+    width: 50%;
+    transform: translateY(-70px);
+    -webkit-transform: translateY(-70px);
+    -moz-transform: translateY(-70px);
+    -ms-transform: translateY(-70px);
+    -o-transform: translateY(-70px);
+    position: relative;
+}
+
+.about-islam .about-islam-content .about-islam-left-video .video-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+}
+
+.about-islam .about-islam-content .about-islam-left-video .video-icon i {
+    font-size: 60px;
+    color: var(--button-color);
+}
+
+.about-islam .about-islam-content .about-islam-left-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
 
+.about-islam .about-islam-content .about-islam-right-text {
+    width: 50%;
+    padding: 50px 0;
+}
+
+.about-islam .about-islam-content .about-islam-right-text h2::before {
+    content: 'Get To Know More\A About Islam';
+    white-space: pre;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.about-islam .about-islam-content .about-islam-right-text p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.599);
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.about-islam .about-islam-content .about-islam-right-text button {
+    padding: 10px 15px;
+    font-size: 13px;
+    background-color: var(--button-color);
+    border: none;
+    margin-top: 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.about-islam .about-islam-content .about-islam-right-text button:hover {
+    background-color: #fb9017;
+}
 
 
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+    .about-islam {
+        padding: 0 20px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+}
+    .about-islam .about-islam-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .about-islam .about-islam-content .about-islam-left-video {
+        width: 100%;
+    }
+    .about-islam .about-islam-content .about-islam-right-text {
+        width: 100%;
+        padding: 0 20px 30px 20px;
+    }
+}
 
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    .about-islam {
+        padding: 0 30px;
+    }
+    .about-islam .about-islam-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .about-islam .about-islam-content .about-islam-left-video {
+        width: 100%;
+    }
+    .about-islam .about-islam-content .about-islam-right-text {
+        width: 100%;
+        padding: 0 30px 30px 30px;
+    }
+}
 
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-islam .about-islam-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .about-islam .about-islam-content .about-islam-left-video {
+        width: 100%;
+    }
+    .about-islam .about-islam-content .about-islam-right-text {
+        width: 100%;
+        padding: 0 0 30px 0px;
+    }
+}
 
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {
+    .about-islam .about-islam-content .about-islam-right-text {
+        padding: 0 30px 30px 30px;
+    }
+}
 
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {}
 
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
 
 
 
