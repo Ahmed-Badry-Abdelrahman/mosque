@@ -1201,7 +1201,11 @@ section.services {
 }
 
 /* Tablets (Portrait) */
-@media (min-width: 769px) and (max-width: 920px) {}
+@media (min-width: 769px) and (max-width: 920px) {
+    .services .services-content .services-right-cards .card {
+        flex: 1 0 220px;
+    }
+}
 
 /* Tablets (Portrait)  custom*/
 @media (min-width: 921px) and (max-width: 1024px) {
