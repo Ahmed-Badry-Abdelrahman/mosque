@@ -1229,24 +1229,15 @@ section.services {
 
 /* Small Desktops / Laptops */
 @media (min-width: 1281px) and (max-width: 1440px) {
-    .services .services-content {
-        flex-direction: column;
-    }
-    .services .services-content .services-left-text {
-        width: 100%;
-    }
-    .services .services-content .services-right-cards {
-        width: 100%;
-    }
     .services .services-content .services-right-cards .card {
-        flex: 1 0 300px;
+        flex: 1 0 200px;
     }
 }
 
 /* Large Desktops */
 @media (min-width: 1441px) {
     .services .services-content .services-right-cards .card {
-        flex: 1 0 300px;
+        flex: 1 0 230px;
     }
 }
 
