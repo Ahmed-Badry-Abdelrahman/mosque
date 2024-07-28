@@ -545,11 +545,12 @@ section.landing .right img {
     margin-bottom: 0;
     padding: 0 70px;
 }
+
 .select-location-content .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px ;
+    padding: 30px;
 }
 
 .select-location-content .header h2 {
@@ -572,7 +573,7 @@ section.landing .right img {
     -o-border-radius: 5px;
 }
 
-.select-location-content .header button span{
+.select-location-content .header button span {
     margin-right: 5px;
 }
 
@@ -580,7 +581,7 @@ section.landing .right img {
 /* Small Mobile Devices (Portrait) */
 @media (max-width: 480px) {
     .select-location {
-        padding: 0 ;
+        padding: 0;
     }
 
     .select-location-content .header h2 {
@@ -592,7 +593,7 @@ section.landing .right img {
 /* Mobile Devices (Landscape) */
 @media (min-width: 481px) and (max-width: 920px) {
     .select-location {
-        padding: 0  20px ;
+        padding: 0 20px;
     }
 
     .select-location-content .header h2 {
@@ -604,7 +605,7 @@ section.landing .right img {
 /* Tablets (Portrait) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .select-location {
-        padding: 0 70px ;
+        padding: 0 70px;
     }
 
     .select-location-content .header h2 {
@@ -697,7 +698,7 @@ section.landing .right img {
 .prayer-timing-content .body .right table {
     width: 100%;
     text-align: center;
-    border-spacing:20px ;
+    border-spacing: 20px;
 }
 
 .prayer-timing-content .body .right table td {
@@ -715,6 +716,7 @@ section.landing .right img {
     font-size: 20px;
     font-weight: 700;
 }
+
 .prayer-timing-content .body .right table th img {
     width: 30px;
     margin-bottom: 10px;
@@ -722,10 +724,10 @@ section.landing .right img {
 
 .prayer-timing-content .body .right table td img {
     width: 25px;
-    
+
 }
 
-.prayer-timing-content .body .right table tr td:first-of-type  {
+.prayer-timing-content .body .right table tr td:first-of-type {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -744,19 +746,24 @@ section.landing .right img {
         -ms-border-radius: 0;
         -o-border-radius: 0;
     }
+
     .prayer-timing .prayer-timing-content .body .left {
         display: none;
     }
+
     .prayer-timing .prayer-timing-content .body .right {
         width: 100%;
     }
-    .prayer-timing-content .body .right table tr td:first-of-type  {
+
+    .prayer-timing-content .body .right table tr td:first-of-type {
         padding-left: 10px;
     }
+
     .prayer-timing-content .body .right table th p {
         font-size: 15px;
         font-weight: 700;
     }
+
     .prayer-timing-content .body .right {
         overflow-x: auto;
     }
@@ -767,9 +774,11 @@ section.landing .right img {
     .prayer-timing {
         padding: 0;
     }
+
     .prayer-timing .prayer-timing-content .body .left {
         display: none;
     }
+
     .prayer-timing .prayer-timing-content .body .right {
         width: 100%;
     }
@@ -780,6 +789,7 @@ section.landing .right img {
     .prayer-timing .prayer-timing-content .body .left {
         display: none;
     }
+
     .prayer-timing .prayer-timing-content .body .right {
         width: 100%;
     }
@@ -793,6 +803,7 @@ section.landing .right img {
     .prayer-timing .prayer-timing-content .body .left {
         display: none;
     }
+
     .prayer-timing .prayer-timing-content .body .right {
         width: 100%;
     }
@@ -844,7 +855,7 @@ section.landing .right img {
     position: relative;
 }
 
-.about-islam .about-islam-content .about-islam-left-video .video-icon{
+.about-islam .about-islam-content .about-islam-left-video .video-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -858,7 +869,7 @@ section.landing .right img {
     color: var(--button-color);
 }
 
-.about-islam .about-islam-content .about-islam-left-video video{
+.about-islam .about-islam-content .about-islam-left-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -919,15 +930,17 @@ section.landing .right img {
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
-}
+    }
+
     .about-islam .about-islam-content {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .about-islam .about-islam-content .about-islam-left-video {
         width: 100%;
     }
+
     .about-islam .about-islam-content .about-islam-right-text {
         width: 100%;
         padding: 0 20px 30px 20px;
@@ -939,14 +952,16 @@ section.landing .right img {
     .about-islam {
         padding: 0 30px;
     }
+
     .about-islam .about-islam-content {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .about-islam .about-islam-content .about-islam-left-video {
         width: 100%;
     }
+
     .about-islam .about-islam-content .about-islam-right-text {
         width: 100%;
         padding: 0 30px 30px 30px;
@@ -959,10 +974,11 @@ section.landing .right img {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .about-islam .about-islam-content .about-islam-left-video {
         width: 100%;
     }
+
     .about-islam .about-islam-content .about-islam-right-text {
         width: 100%;
         padding: 0 0 30px 0px;
@@ -992,12 +1008,245 @@ section.landing .right img {
 
 
 
+/* ------------------------------------------------------ */
+/* -------------                            ------------- */
+/* -------------       services             ------------- */
+/* -------------                            ------------- */
+/* ------------------------------------------------------ */
+
+section.services {
+    background: linear-gradient(90deg, rgba(1, 145, 71, 1) 0%, rgba(3, 147, 73, 1) 21%, rgba(5, 173, 87, 1) 58%, rgba(5, 175, 87, 1) 79%, rgba(4, 200, 99, 1) 91%, rgba(2, 222, 109, 1) 100%);
+    height: auto;
+    padding: 60px 150px;
+    margin-top: 70px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
+.services .services-content {
+    display: flex;
+    gap: 50px;
+}
+
+.services .services-content .services-left-text {
+    width: 40%;
+}
+
+.services .services-content .services-left-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.services .services-content .services-left-text p {
+    font-size: 14px;
+    color: #ffffffab;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.services .services-content .services-left-text button {
+    padding: 10px 15px;
+    font-size: 13px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.services .services-content .services-right-cards {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.services .services-content .services-right-cards .card {
+    flex: 1 0 200px;
+    padding: 15px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    cursor: pointer;
+    transition: all ease .4s;
+    -webkit-transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    -ms-transition: all ease .4s;
+    -o-transition: all ease .4s;
+}
+
+.services .services-content .services-right-cards .card img {
+    width: 35px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.services .services-content .services-right-cards .card.active img{
+    background-color: #00c76041;
+}
+
+.services .services-content .services-right-cards .card.active {
+    background-color: #fff;
+}
+
+.services .services-content .services-right-cards .card:hover {
+    background-color: #ffffffbb;
+}
+.services .services-content .services-right-cards .card.active:hover {
+    background-color: #fffffff3;
+}
+
+.services .services-content .services-right-cards .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services .services-content .services-right-cards .card p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 0.71);
+    text-align: justify;
+}
+
+.services .services-content .services-right-cards .card p:last-of-type {
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+}
 
 
 
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+    section.services {
+        padding: 30px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+}
+    .services .services-content {
+        flex-direction: column;
+    }
+    .services .services-content .services-left-text {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards .card {
+        flex: 1 0 240px;
+    }
+}
 
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    section.services {
+        padding: 60px;
+    }
+    .services .services-content {
+        flex-direction: column;
+    }
+    .services .services-content .services-left-text {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards .card {
+        flex: 1 0 240px;
+    }
+}
 
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    section.services {
+        padding: 60px;
+    }
+    .services .services-content {
+        flex-direction: column;
+    }
+    .services .services-content .services-left-text {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards .card {
+        flex: 1 0 240px;
+    }
+}
 
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {}
+
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {
+
+}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    section.services {
+        padding: 60px 130px;
+    }
+    .services .services-content {
+        flex-direction: column;
+    }
+    .services .services-content .services-left-text {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards .card {
+        flex: 1 0 260px;
+    }
+}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .services .services-content {
+        flex-direction: column;
+    }
+    .services .services-content .services-left-text {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards {
+        width: 100%;
+    }
+    .services .services-content .services-right-cards .card {
+        flex: 1 0 300px;
+    }
+}
+
+/* Large Desktops */
+@media (min-width: 1441px) {
+    .services .services-content .services-right-cards .card {
+        flex: 1 0 300px;
+    }
+}
 
 
 
