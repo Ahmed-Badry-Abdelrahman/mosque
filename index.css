@@ -1082,7 +1082,6 @@ section.services {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-    cursor: pointer;
     transition: all ease .4s;
     -webkit-transition: all ease .4s;
     -moz-transition: all ease .4s;
@@ -1129,7 +1128,7 @@ section.services {
     text-align: justify;
 }
 
-.services .services-content .services-right-cards .card p:last-of-type {
+.services .services-content .services-right-cards .card a {
     font-size: 12px;
     font-weight: 700;
     color: black;
