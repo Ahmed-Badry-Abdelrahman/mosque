@@ -190,7 +190,8 @@
             <section class="about-islam">
                 <div class="about-islam-content">
                     <div class="about-islam-left-video">
-                        <video id="myVideo" src="masjied.mp4" controls muted alt="video not found" poster="./img/poster.png"></video>
+                        <video id="myVideo" src="masjied.mp4" controls muted alt="video not found"
+                            poster="./img/poster.png"></video>
                         <div id="myVideoIcon" class="video-icon">
                             <i class="fa-solid fa-circle-play"></i>
                         </div>
@@ -210,86 +211,106 @@
                 <div class="services-content">
                     <div class="services-left-text">
                         <h2>Services We Offer</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum expedita quod, libero animi earum ducimus commodi debitis dignissimos officia, accusantium quidem cumque, sed id blanditiis. Atque corrupti minima in modi!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex unde veritatis iure! Repellendus molestiae recusandae soluta sit.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum expedita quod, libero animi
+                            earum ducimus commodi debitis dignissimos officia, accusantium quidem cumque, sed id
+                            blanditiis. Atque corrupti minima in modi!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex unde veritatis iure! Repellendus
+                            molestiae recusandae soluta sit.</p>
                         <button>Discover More</button>
                     </div>
                     <div class="services-right-cards">
                         <div class="card active">
                             <img src="./img/fa6-solid--mosque.png" alt="mosque">
                             <h3>Mosque Develop</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet eius itaque.</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet
+                                eius itaque.</p>
                             <a href="#">Read more</a>
                         </div>
                         <div class="card">
                             <img src="./img/arcticons--al-quran-indonesia.png" alt="quran">
                             <h3>Quran Learning</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet eius itaque.</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet
+                                eius itaque.</p>
                             <a href="#">Read more</a>
                         </div>
                         <div class="card">
                             <img src="./img/mdi--grave-stone.png" alt="stone">
                             <h3>Funeral Service</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet eius itaque.</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet
+                                eius itaque.</p>
                             <a href="#">Read more</a>
                         </div>
                         <div class="card">
                             <img src="./img/fluent--money-hand-24-regular.png" alt="money">
                             <h3>Help Poor</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet eius itaque.</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur dolorem id eveniet
+                                eius itaque.</p>
                             <a href="#">Read more</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="Donation">
+            <section class="donation">
                 <div class="donation-content">
                     <div class="donation-left-text">
-                        <h2>Donation</h2>
                         <figure>
-                            <img src="./img/woman-hand-holding-money-bag-concept-saving-finance-accounting-1300x731-1.jpg" alt="">
+                            <img src="./img/woman-hand-holding-money-bag-concept-saving-finance-accounting-1300x731-1.jpg"
+                                alt="">
                         </figure>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati consequatur dignissimos veritatis impedit iure quam molestias dolorem porro iste, debitis, voluptatem ea distinctio cum adipisci suscipit placeat perspiciatis odit! Cupiditate.</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero sed perspiciatis amet quasi dignissimos ipsum eius corporis labore incidunt, porro deserunt quisquam sequi?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati consequatur dignissimos
+                            veritatis impedit iure quam molestias dolorem porro iste, debitis, voluptatem ea distinctio
+                            cum adipisci suscipit placeat perspiciatis odit! Cupiditate.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero sed perspiciatis amet quasi
+                            dignissimos ipsum eius corporis labore incidunt, porro deserunt quisquam sequi?</p>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, aspernatur.</p>
                         <a href="#">Read more</a>
                     </div>
                     <div class="donation-right-form">
                         <h2>Make Your Donation</h2>
                         <form>
-                            <div class="atomatick-donation-value-rwo">
-                                <input id="inp-100"  type="text" value="100"  readonly>
-                                <input id="inp-200"  type="text" value="200"  readonly>
-                                <input id="inp-500"  type="text" value="500"  readonly>
-                                <input id="inp-1000" type="text" value="1000" readonly>
+
+                            <div class="automatic-donation-value-rwo">
+                                <input id="inp-100" type="text" value="$100" readonly>
+                                <input class="active" id="inp-200" type="text" value="$200" readonly>
+                                <input id="inp-500" type="text" value="$500" readonly>
+                                <input id="inp-1000" type="text" value="$1000" readonly>
                             </div>
                             <div class="manually-donation-value-rwo">
-                                <label for="inp-manually"></label>
-                                <input id="inp-manually"  type="number">
+                                <label for="inp-manually">Your Amount <span>$</span> </label>
+                                <input id="inp-manually" type="number">
                                 <select name="currency" id="currency-type">
                                     <option value="USD">USD</option>
                                     <option value="IDR">IDR</option>
                                     <option value="USD">EGP</option>
                                 </select>
                             </div>
-                            <div class="repetion-donation">
-                                <input type="radio" name="rep-donation" id="one-time">
-                                <label for="one-time">One Time</label>
-                                <input type="radio" name="rep-donation" id="manthly">
+                            <div class="repetition-donation">
+                                <input type="radio" name="rep-donation" id="one-time" value="one-time" checked>
+                                <label for="one-time">One-time</label>
+                                <input type="radio" name="rep-donation" id="manthly" value="manthly">
                                 <label for="manthly">Manthly</label>
                             </div>
                             <div class="personal-information">
-                                <label for="full-name">Full Name</label>
-                                <input type="text" name="full-name" id="full-name">
-                                <label for="Email">Email</label>
-                                <input type="text" name="email" id="email">
-                                <label for="date">Date</label>
-                                <input type="date" name="date" id="date">
-                                <label for="message">Message</label>
-                                <textarea></textarea>
-
+                                <div class="full-name">
+                                    <label for="full-name">Full Name</label>
+                                    <input type="text" name="full-name" id="full-name">
+                                </div>
+                                <div class="input-container">
+                                    <div class="email">
+                                        <label for="Email">Email</label>
+                                        <input type="text" name="email" id="email">
+                                    </div>
+                                    <div class="date">
+                                        <label for="date">Date</label>
+                                        <input type="date" name="date" id="date" >
+                                    </div>
+                                </div>
+                                <div class="message">
+                                    <label for="message">Message</label>
+                                    <textarea></textarea>
+                                </div>
                             </div>
-                            <input type="submit" name="submit" id="submit">
+                            <button type="submit">Donate Now</button>
                         </form>
                     </div>
                 </div>
