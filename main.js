@@ -56,3 +56,14 @@ video.addEventListener('mouseleave', () => {
     videoIcon.style.display = 'block';
     video.pause();
 });
+
+
+const cards = document.querySelectorAll('.help-cards .card')
+cards.forEach(card => {
+    card.addEventListener('mousemove', function () {
+        cards.forEach(card => {
+            card.classList.remove('active');
+        })
+        this.classList.toggle('active');
+    });
+});
