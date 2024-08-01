@@ -1520,6 +1520,7 @@ section.donation {
         -ms-border-radius: 0;
         -o-border-radius: 0;
     }
+
     .donation .donation-content {
         flex-direction: column;
     }
@@ -1569,6 +1570,7 @@ section.donation {
     section.donation {
         padding: 50px 30px;
     }
+
     .donation .donation-content {
         flex-direction: column;
     }
@@ -1709,7 +1711,7 @@ section.help .help-content .help-cards .card {
     margin: 0 20px;
 }
 
-section.help .help-content .help-cards .card figure { 
+section.help .help-content .help-cards .card figure {
     width: 100%;
     height: 200px;
     border-top-left-radius: 10px;
@@ -1777,8 +1779,8 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; 
-    font-size: 9px; 
+    color: white;
+    font-size: 9px;
     font-weight: 700;
     text-align: center;
 }
@@ -1813,7 +1815,8 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 }
 
 .help .help-content .help-cards .card button {
-    transform: translateY(-20px); /* Initial position off-screen */
+    transform: translateY(-20px);
+    /* Initial position off-screen */
     opacity: 0;
     padding: 10px 15px;
     font-size: 13px;
@@ -1835,7 +1838,8 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 }
 
 .help .help-content .help-cards .card.active button {
-    transform: translateY(0); /* Move to the original position */
+    transform: translateY(0);
+    /* Move to the original position */
     opacity: 1;
 }
 
@@ -1855,7 +1859,7 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
         font-size: 13px;
         color: rgba(0, 0, 0, 0.564);
     }
-    
+
     section.help .help-content .help-cards {
         flex-direction: column;
         gap: 60px;
@@ -1903,16 +1907,14 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 }
 
 /* Tablets (Portrait)  custom*/
-@media (min-width: 921px) and (max-width: 1024px) {
-
-}
+@media (min-width: 921px) and (max-width: 1024px) {}
 
 /* Tablets (Landscape) */
 @media (min-width: 1025px) and (max-width: 1280px) {
     section.help .help-content .help-cards .card {
         margin: 0 10px;
     }
-    
+
 }
 
 
@@ -1932,8 +1934,8 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 
 section.team {
     margin-top: 50px;
-    background: rgb(255,152,34);
-    background: linear-gradient(165deg, rgba(255,152,34,1) 17%, rgba(249,157,53,1) 43%, rgba(251,172,80,1) 63%, rgba(246,191,128,1) 85%, rgba(247,201,146,1) 100%);
+    background: rgb(255, 152, 34);
+    background: linear-gradient(165deg, rgba(255, 152, 34, 1) 17%, rgba(249, 157, 53, 1) 43%, rgba(251, 172, 80, 1) 63%, rgba(246, 191, 128, 1) 85%, rgba(247, 201, 146, 1) 100%);
     height: auto;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -1952,9 +1954,10 @@ section.team {
     align-items: center;
 }
 
-.team-content .team-header .left  {
+.team-content .team-header .left {
     margin-bottom: 20px;
 }
+
 .team-content .team-header .left h2 {
     font-size: 30px;
     font-weight: 700;
@@ -1966,7 +1969,7 @@ section.team {
     font-size: 15px;
     margin-bottom: 10px;
     color: #ffffffa2;
-    width: clamp(400px, 80vw + 1rem , 500px);
+    width: clamp(400px, 80vw + 1rem, 500px);
 }
 
 .team-content .team-header .right button {
@@ -2006,7 +2009,7 @@ section.team {
     width: 200px;
     height: 180px;
     position: relative;
-    margin-right: 130px;
+    margin-right: 110px;
 }
 
 .team-content .team-cards .t-card figure {
@@ -2048,6 +2051,82 @@ section.team {
 }
 
 
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+    section.team {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .team-content {
+        padding: 30px;
+    }
+
+    .team-content .team-header {
+        align-items: flex-start;
+        margin-bottom: 30px;
+        border-bottom: solid 4px rgba(0, 0, 0, 0.049);
+    }
+
+    .team-content .team-header .left {
+        margin-bottom: 20px;
+    }
+
+    .team-content .team-header .left h2 {
+        font-size: 20px;
+    }
+
+    .team-content .team-header .left p {
+        font-size: 12px;
+        width: clamp(180px, 70vw + 1rem, 200px);
+    }
+
+    .team-content .team-header .right button {
+        padding: 10px 13px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    .team-content {
+        padding: 30px;
+    }
+
+    .team-content .team-header {
+        align-items: flex-start;
+        margin-bottom: 30px;
+        border-bottom: solid 4px rgba(0, 0, 0, 0.049);
+    }
+
+    .team-content .team-header .left {
+        margin-bottom: 20px;
+    }
+
+    .team-content .team-header .left h2 {
+        font-size: 20px;
+    }
+
+    .team-content .team-header .left p {
+        font-size: 12px;
+        width: clamp(180px, 70vw + 1rem, 260px);
+    }
+
+    .team-content .team-cards {
+        column-gap: 20px;
+    }
+    
+}
+
+
+
+
+
+
+
 
 
 
@@ -2062,8 +2141,7 @@ section.team {
 @media (min-width: 481px) and (max-width: 920px) {}
 
 /* Tablets (Portrait) */
-@media (min-width: 768px) and (max-width: 1024px) {
-}
+@media (min-width: 768px) and (max-width: 1024px) {}
 
 /* Tablets (Portrait) */
 @media (min-width: 769px) and (max-width: 920px) {}
@@ -2072,9 +2150,7 @@ section.team {
 @media (min-width: 921px) and (max-width: 1024px) {}
 
 /* Tablets (Landscape) */
-@media (min-width: 1025px) and (max-width: 1280px) {
-
-}
+@media (min-width: 1025px) and (max-width: 1280px) {}
 
 
 
