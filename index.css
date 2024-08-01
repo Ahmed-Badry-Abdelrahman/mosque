@@ -1693,7 +1693,7 @@ section.help .help-content .help-cards {
 
 section.help .help-content .help-cards .card {
     min-width: 300px;
-    max-width: 300px;
+    max-width: 320px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1826,7 +1826,11 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 }
 
 .help .help-content .help-cards .card.active {
-    transform: scale(1.05); /* Slightly zoom in the card */
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .help .help-content .help-cards .card.active button {
