@@ -317,9 +317,9 @@ i.menu-btn {
 /* -------------                            ------------- */
 /* ------------------------------------------------------ */
 
-section {
+/* section {
     height: 600px;
-}
+} */
 
 section.landing {
     height: 500px;
@@ -1659,6 +1659,7 @@ section.donation {
 
 
 section.help {
+    /* margin-bottom: 50px; */
 }
 
 section.help .help-content {
@@ -1923,22 +1924,128 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 @media (min-width: 1441px) {}
 
 
+/* ------------------------------------------------------ */
+/* -------------                            ------------- */
+/* -------------           team             ------------- */
+/* -------------                            ------------- */
+/* ------------------------------------------------------ */
 
+section.team {
+    margin-top: 50px;
+    background: rgb(255,152,34);
+    background: linear-gradient(165deg, rgba(255,152,34,1) 17%, rgba(249,157,53,1) 43%, rgba(251,172,80,1) 63%, rgba(246,191,128,1) 85%, rgba(247,201,146,1) 100%);
+    height: auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
 
+.team-content {
+    padding: 50px 70px;
+}
 
+.team-content .team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.team-content .team-header .left  {
+    margin-bottom: 20px;
+}
+.team-content .team-header .left h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
 
+.team-content .team-header .left p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ffffffa2;
+    width: clamp(400px, 80vw + 1rem , 500px);
+}
 
+.team-content .team-header .right button {
+    padding: 10px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    transition: all ease .4s;
+    -webkit-transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    -ms-transition: all ease .4s;
+    -o-transition: all ease .4s;
+}
 
+.team-content .team-header .right button:hover {
+    background-color: #f1f1f1;
+}
 
+.team-content .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    column-gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.team-content .team-cards .t-card {
+    width: 200px;
+    height: 180px;
+    position: relative;
+    margin-right: 130px;
+}
 
+.team-content .team-cards .t-card figure {
+    width: 100%;
+    height: 100%;
+}
 
+.team-content .team-cards .t-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
+.team-content .team-cards .t-card-body {
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    background-color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
+.team-content .team-cards .t-card-body h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
 
-
-
+.team-content .team-cards .t-card-body p {
+    font-size: 12px;
+    color: #00000094;
+}
 
 
 
