@@ -1857,7 +1857,7 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
     
     section.help .help-content .help-cards {
         flex-direction: column;
-        gap: 30px;
+        gap: 60px;
     }
 
     section.help .help-content .help-cards .card {
@@ -1869,7 +1869,7 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 @media (min-width: 481px) and (max-width: 920px) {
     section.help .help-content .help-cards {
         flex-direction: column;
-        gap: 30px;
+        gap: 60px;
     }
 
     section.help .help-content .help-cards .card {
@@ -1881,7 +1881,7 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 @media (min-width: 768px) and (max-width: 1024px) {
     section.help .help-content .help-cards {
         flex-direction: column;
-        gap: 30px;
+        gap: 60px;
     }
 
     section.help .help-content .help-cards .card {
@@ -1893,7 +1893,7 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 @media (min-width: 769px) and (max-width: 920px) {
     section.help .help-content .help-cards {
         flex-direction: column;
-        gap: 30px;
+        gap: 60px;
     }
 
     section.help .help-content .help-cards .card {
