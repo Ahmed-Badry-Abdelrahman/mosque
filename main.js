@@ -67,3 +67,4 @@ cards.forEach(card => {
         this.classList.toggle('active');
     });
 });
+

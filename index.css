@@ -1687,7 +1687,7 @@ section.help .help-content .help-header p {
 section.help .help-content .help-cards {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -1705,6 +1705,7 @@ section.help .help-content .help-cards .card {
     -moz-transition: all ease .4s;
     -ms-transition: all ease .4s;
     -o-transition: all ease .4s;
+    margin: 0 20px;
 }
 
 section.help .help-content .help-cards .card figure { 
@@ -1800,30 +1801,139 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 }
 
 
+.help .help-content .help-cards .card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+}
+
 .help .help-content .help-cards .card button {
-    display: none;
+    transform: translateY(-20px); /* Initial position off-screen */
+    opacity: 0;
     padding: 10px 15px;
     font-size: 13px;
     font-weight: 700;
     background-color: var(--button-color);
     border: none;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     color: #fff;
     cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.help .help-content .help-cards .card.active {
+    transform: scale(1.05); /* Slightly zoom in the card */
 }
 
 .help .help-content .help-cards .card.active button {
-    display: block;
+    transform: translateY(0); /* Move to the original position */
+    opacity: 1;
+}
+
+
+
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+
+    .select.help {
+        padding: 0;
+    }
+
+    section.help .help-content .help-header p {
+        width: clamp(200px, 80vw + 1rem, 300px);
+        margin: auto;
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.564);
+    }
+    
+    section.help .help-content .help-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section.help .help-content .help-cards .card {
+        min-width: 340px;
+    }
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    section.help .help-content .help-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section.help .help-content .help-cards .card {
+        min-width: 400px;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    section.help .help-content .help-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section.help .help-content .help-cards .card {
+        min-width: 600px;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {
+    section.help .help-content .help-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section.help .help-content .help-cards .card {
+        max-width: 780px;
+    }
+}
+
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {
 
 }
 
-.card-btns {
-    text-align: center;
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    section.help .help-content .help-cards .card {
+        margin: 0 10px;
+    }
+    
 }
+
+
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1852,6 +1962,7 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
 
 /* Tablets (Landscape) */
 @media (min-width: 1025px) and (max-width: 1280px) {
+
 }
 
 
