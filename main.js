@@ -68,3 +68,70 @@ cards.forEach(card => {
     });
 });
 
+
+// news card
+
+document.addEventListener('DOMContentLoaded', function () {
+    function commentCards() {
+        document.querySelectorAll('.news-cards').forEach(function (cardContainer) {
+            const cards = cardContainer.querySelectorAll('.n-card');
+            let currentCard = cardContainer.querySelector('.card--current') || cards[0];
+            let nextCard = currentCard.nextElementSibling || cards[0];
+
+            cards.forEach(function (card) {
+                card.addEventListener('click', function () {
+                    currentCard.classList.remove('card--current');
+                    currentCard.classList.add('card--out');
+
+                    currentCard = nextCard;
+                    currentCard.classList.remove('card--out');
+                    currentCard.classList.add('card--current');
+
+                    nextCard = currentCard.nextElementSibling || cards[0];
+                    nextCard.classList.add('card--next');
+                });
+            });
+
+            currentCard.classList.add('card--current');
+            nextCard.classList.add('card--next');
+            cardContainer.classList.add('cards--active');
+        });
+    }
+
+    commentCards();
+});
+
+
+
+// $.fn.commentCards = function () {
+
+//     return this.each(function () {
+
+//         var $this = $(this),
+//             $cards = $this.find('.card'),
+//             $current = $cards.filter('.card--current'),
+//             $next;
+
+//         $cards.on('click', function () {
+//             if (!$current.is(this)) {
+//                 $cards.removeClass('card--current card--out card--next');
+//                 $current.addClass('card--out');
+//                 $current = $(this).addClass('card--current');
+//                 $next = $current.next();
+//                 $next = $next.length ? $next : $cards.first();
+//                 $next.addClass('card--next');
+//             }
+//         });
+
+//         if (!$current.length) {
+//             $current = $cards.last();
+//             $cards.first().trigger('click');
+//         }
+
+//         $this.addClass('cards--active');
+
+//     })
+
+// };
+
+// $('.cards').commentCards();
