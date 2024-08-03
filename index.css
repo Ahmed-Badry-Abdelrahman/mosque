@@ -1871,7 +1871,8 @@ section.help .help-content .help-cards .card .card-body .outer-bar .inner-bar {
     }
 
     section.help .help-content .help-cards .card {
-        min-width: 340px;
+        min-width: 300px;
+        margin: 0;
     }
 }
 
@@ -2156,9 +2157,9 @@ section.news {
 
 .news-header p {
     font-size: 16px;
-    width: clamp(600px , 80vw + 1rem, 700px);
+    width: clamp(600px, 80vw + 1rem, 700px);
     margin: 0 auto;
-} 
+}
 
 section.news .news-content {
     height: 100%;
@@ -2373,7 +2374,194 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
 
 
 
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+    section.news {
+        height: auto;
+    }
 
+    .news-header {
+        margin-bottom: 50px;
+    }
+
+    section.news .news-content {
+        flex-direction: column;
+    }
+
+    section.news .news-content .news-left {
+        width: 100%;
+    }
+
+    .news-cards {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    section.news .news-content .news-right {
+        width: 100%;
+        height: 300px;
+    }
+
+    .news-header h1 {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .news-header p {
+        font-size: 12px;
+        width: clamp(100px, 80vw + 1rem, 700px);
+        margin: 0 auto;
+    }
+
+    section.news .news-content .news-right .nl-card .nl-card-body h1 {
+        margin: 10px 0;
+        font-size: 15px;
+        font-weight: 700;
+        width: clamp(80px, 40vw + 1rem, 200px);
+    }
+    section.news .news-content .news-right .nl-card .nl-card-body p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        width: clamp(80px, 40vw + 1rem, 200px);
+    }
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    section.news {
+        height: auto;
+    }
+
+    .news-header {
+        margin-bottom: 50px;
+    }
+
+    section.news .news-content {
+        flex-direction: column;
+    }
+
+    section.news .news-content .news-left {
+        width: 100%;
+    }
+
+    .news-cards {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    section.news .news-content .news-right {
+        width: 100%;
+        height: 300px;
+    }
+
+    .news-header h1 {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .news-header p {
+        font-size: 12px;
+        width: clamp(100px, 80vw + 1rem, 700px);
+        margin: 0 auto;
+    }
+
+    section.news .news-content .news-right .nl-card .nl-card-body h1 {
+        margin: 10px 0;
+        font-size: 15px;
+        font-weight: 700;
+        width: clamp(80px, 40vw + 1rem, 200px);
+    }
+    section.news .news-content .news-right .nl-card .nl-card-body p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        width: clamp(80px, 40vw + 1rem, 200px);
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    section.news {
+        height: auto;
+    }
+
+    .news-header {
+        margin-bottom: 50px;
+    }
+
+    section.news .news-content {
+        flex-direction: column;
+    }
+
+    section.news .news-content .news-left {
+        width: 100%;
+    }
+
+    .news-cards {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    section.news .news-content .news-right {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {
+    
+    section.news {
+        height: auto;
+    }
+
+    .news-header {
+        margin-bottom: 50px;
+    }
+
+    section.news .news-content {
+        flex-direction: column;
+    }
+
+    section.news .news-content .news-left {
+        width: 100%;
+    }
+
+    .news-cards {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    section.news .news-content .news-right {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    section.news .news-content .news-right .nl-card .nl-card-body h1 {
+        font-size: 15px;
+        width: clamp(100px, 80vw + 1rem, 180px);
+    }
+
+    section.news .news-content .news-right .nl-card .nl-card-body p {
+        font-size: 10px;
+        width: clamp(100px, 80vw + 1rem, 210px);
+        text-align: justify;
+        padding-right: 10px;
+    }
+
+    section.news .news-content .news-right .nl-card .nl-card-body a {
+        font-size: 10px;
+    }
+}
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
 
 
 
