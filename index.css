@@ -28,10 +28,11 @@ section {
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto; 
+    grid-template-rows: auto auto;
     grid-template-areas:
         ". content content content content content content content content content content ."
-        "footer footer footer footer footer footer footer footer footer footer footer footer"; /* New row for download */
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    /* New row for download */
 }
 
 
@@ -159,7 +160,8 @@ i.menu-btn {
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 'content content content content content content content content content content content content'
-        "footer footer footer footer footer footer footer footer footer footer footer footer"; /* New row for download */
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+        /* New row for download */
     }
 
     i.menu-btn {
@@ -2413,6 +2415,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
         font-weight: 700;
         margin-bottom: 10px;
     }
+
     .news-header p {
         font-size: 12px;
         width: clamp(100px, 80vw + 1rem, 700px);
@@ -2425,6 +2428,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
         font-weight: 700;
         width: clamp(80px, 40vw + 1rem, 200px);
     }
+
     section.news .news-content .news-right .nl-card .nl-card-body p {
         font-size: 12px;
         margin-bottom: 10px;
@@ -2466,6 +2470,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
         font-weight: 700;
         margin-bottom: 10px;
     }
+
     .news-header p {
         font-size: 12px;
         width: clamp(100px, 80vw + 1rem, 700px);
@@ -2478,6 +2483,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
         font-weight: 700;
         width: clamp(80px, 40vw + 1rem, 200px);
     }
+
     section.news .news-content .news-right .nl-card .nl-card-body p {
         font-size: 12px;
         margin-bottom: 10px;
@@ -2518,7 +2524,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
 
 /* Tablets (Portrait) */
 @media (min-width: 769px) and (max-width: 920px) {
-    
+
     section.news {
         height: auto;
     }
@@ -2588,7 +2594,7 @@ footer {
 .foot-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto; 
+    grid-template-rows: auto auto;
     grid-template-areas:
         ". cont cont cont cont cont cont cont cont cont cont ."
 }
@@ -2598,7 +2604,9 @@ footer {
     padding: 50px;
 }
 
-section.download {}
+section.download {
+
+}
 
 section.download .download-content {
     display: flex;
@@ -2607,19 +2615,94 @@ section.download .download-content {
 
 section.download .download-content .do-left-phone-img {
     width: 40%;
+    position: relative;
 }
 
+section.download .download-content .do-left-phone-img figure {
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section.download .download-content .do-left-phone-img figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.6) -130px 110px 100px -45px;
+    border-radius: 30px;
+}
+
+section.download .download-content .do-left-phone-img img:last-of-type {
+    transform:  rotate(-20deg);
+    -webkit-transform:  rotate(-20deg);
+    -moz-transform:  rotate(-20deg);
+    -ms-transform:  rotate(-20deg);
+    -o-transform:  rotate(-20deg);
+}
 
 section.download .download-content .do-right-text {
     width: 40%;
 }
 
 
+section.download .download-content .do-right-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+section.download .download-content .do-right-text h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
 
+section.download .download-content .do-right-text p {
+    font-size: 15px;
+    margin: 0 auto;
+    color: #000000a2;
+    text-align: center;
+}
 
+section.download .download-content .do-right-text .get-apps {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
 
+section.download .download-content .do-right-text .app-store a,
+section.download .download-content .do-right-text .google-play a  {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: #000000;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 
+}
+
+section.download .download-content .do-right-text .app-store a i,
+section.download .download-content .do-right-text .google-play a i  {
+    color: #fff;
+    font-size: 30px;
+}
+
+section.download .download-content .do-right-text .app-store a div p,
+section.download .download-content .do-right-text .google-play a div p  {
+    color: #fff;
+    font-size: 10px;
+}
 
 
 
