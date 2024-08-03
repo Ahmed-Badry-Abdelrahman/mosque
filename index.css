@@ -28,9 +28,13 @@ section {
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: '. content content content content content content content content content content .';
+    grid-template-rows: auto auto; 
+    grid-template-areas:
+        ". content content content content content content content content content content ."
+        "footer footer footer footer footer footer footer footer footer footer footer footer"; /* New row for download */
 }
+
+
 
 .content {
     grid-area: content;
@@ -154,7 +158,8 @@ i.menu-btn {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
-        grid-template-areas: 'content content content content content content content content content content content content';
+        grid-template-areas: 'content content content content content content content content content content content content'
+        "footer footer footer footer footer footer footer footer footer footer footer footer"; /* New row for download */
     }
 
     i.menu-btn {
@@ -2386,6 +2391,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
 
     section.news .news-content {
         flex-direction: column;
+        gap: 70PX;
     }
 
     section.news .news-content .news-left {
@@ -2438,6 +2444,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
 
     section.news .news-content {
         flex-direction: column;
+        gap: 70PX;
     }
 
     section.news .news-content .news-left {
@@ -2491,6 +2498,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
 
     section.news .news-content {
         flex-direction: column;
+        gap: 70PX;
     }
 
     section.news .news-content .news-left {
@@ -2521,6 +2529,7 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
 
     section.news .news-content {
         flex-direction: column;
+        gap: 70PX;
     }
 
     section.news .news-content .news-left {
@@ -2564,13 +2573,46 @@ section.news .news-content .news-right .nl-card .nl-card-body a {
 @media (min-width: 1441px) {}
 
 
+/* ------------------------------------------------------ */
+/* -------------                            ------------- */
+/* -------------           footer           ------------- */
+/* -------------                            ------------- */
+/* ------------------------------------------------------ */
+
+footer {
+    grid-area: footer;
+    background-color: var(--secondary-color);
+    margin-top: 100px;
+}
+
+.foot-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto; 
+    grid-template-areas:
+        ". cont cont cont cont cont cont cont cont cont cont ."
+}
+
+.foot-content section {
+    grid-area: cont;
+    padding: 50px;
+}
+
+section.download {}
+
+section.download .download-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.download .download-content .do-left-phone-img {
+    width: 40%;
+}
 
 
-
-
-
-
-
+section.download .download-content .do-right-text {
+    width: 40%;
+}
 
 
 
