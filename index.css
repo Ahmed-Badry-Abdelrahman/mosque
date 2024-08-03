@@ -2604,9 +2604,7 @@ footer {
     padding: 50px;
 }
 
-section.download {
-
-}
+section.download {}
 
 section.download .download-content {
     display: flex;
@@ -2627,7 +2625,7 @@ section.download .download-content .do-left-phone-img figure {
 }
 
 section.download .download-content .do-left-phone-img figure img {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     object-fit: contain;
     box-shadow: rgba(0, 0, 0, 0.6) -130px 110px 100px -45px;
@@ -2635,11 +2633,11 @@ section.download .download-content .do-left-phone-img figure img {
 }
 
 section.download .download-content .do-left-phone-img img:last-of-type {
-    transform:  rotate(-20deg);
-    -webkit-transform:  rotate(-20deg);
-    -moz-transform:  rotate(-20deg);
-    -ms-transform:  rotate(-20deg);
-    -o-transform:  rotate(-20deg);
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
 }
 
 section.download .download-content .do-right-text {
@@ -2676,7 +2674,7 @@ section.download .download-content .do-right-text .get-apps {
 }
 
 section.download .download-content .do-right-text .app-store a,
-section.download .download-content .do-right-text .google-play a  {
+section.download .download-content .do-right-text .google-play a {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -2693,16 +2691,124 @@ section.download .download-content .do-right-text .google-play a  {
 }
 
 section.download .download-content .do-right-text .app-store a i,
-section.download .download-content .do-right-text .google-play a i  {
+section.download .download-content .do-right-text .google-play a i {
     color: #fff;
     font-size: 30px;
 }
 
 section.download .download-content .do-right-text .app-store a div p,
-section.download .download-content .do-right-text .google-play a div p  {
+section.download .download-content .do-right-text .google-play a div p {
     color: #fff;
     font-size: 10px;
+    margin: 0;
+    text-align: start;
 }
+
+
+/* Small Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+    .foot-content {
+        grid-template-areas:
+            "cont cont cont cont cont cont cont cont cont cont cont cont"
+    }
+
+    section.download .download-content .do-left-phone-img {
+        display: none;
+    }
+
+    section.download .download-content .do-right-text {
+        width: 100%;
+    }
+
+    .foot-content section {
+        padding: 20px;
+    }
+
+    section.download .download-content .do-right-text .get-apps {
+        flex-direction: column;
+    }
+
+}
+
+/* Mobile Devices (Landscape) */
+@media (min-width: 481px) and (max-width: 920px) {
+    .foot-content {
+        grid-template-areas:
+            "cont cont cont cont cont cont cont cont cont cont cont cont"
+    }
+
+    section.download .download-content .do-left-phone-img {
+        display: none;
+    }
+
+    section.download .download-content .do-right-text {
+        width: 100%;
+    }
+
+    .foot-content section {
+        padding: 20px;
+    }
+
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .foot-content {
+        grid-template-areas: ". cont cont cont cont cont cont cont cont cont cont .";
+    }
+
+    section.download .download-content .do-right-text .get-apps {
+        flex-direction: column;
+    }
+
+    section.download .download-content .do-right-text .get-apps div {
+        width: 100%;
+    }
+
+    section.download .download-content .do-right-text h1 {
+        font-size: 24px;
+    }
+
+    section.download .download-content .do-right-text p {
+        font-size: 10px;
+    }
+
+    section.download .download-content .do-left-phone-img {
+        display: block;
+    }
+}
+
+/* Tablets (Portrait) */
+@media (min-width: 769px) and (max-width: 920px) {}
+
+/* Tablets (Portrait)  custom*/
+@media (min-width: 921px) and (max-width: 1024px) {}
+
+/* Tablets (Landscape) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    section.download .download-content .do-right-text {
+        width: 50%;
+    }
+
+}
+
+
+
+/* Small Desktops / Laptops */
+@media (min-width: 1281px) and (max-width: 1440px) {}
+
+/* Large Desktops */
+@media (min-width: 1441px) {}
+
+
+
+
+
+
+
+
+
 
 
 
