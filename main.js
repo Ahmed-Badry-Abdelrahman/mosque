@@ -102,36 +102,167 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// let selectedLocationBtn = document.getElementById('select-location')
+// selectedLocationBtn.addEventListener('click', function () {
+//     document.getElementById('location-modal').classList.toggle('show');
+// });
+const cityData = {
+    Egypt: ["Cairo", "Alexandria", "Giza", "Shubra El-Kheima", "Port Said", "Suez", "Luxor", "Aswan", "Tanta", "Ismailia"]
+};
 
-// $.fn.commentCards = function () {
+document.addEventListener('DOMContentLoaded', () => {
+    populateCityList();
+    setDefaultCity();
+});
 
-//     return this.each(function () {
+function populateCityList() {
+    const cityList = document.getElementById("city-list");
 
-//         var $this = $(this),
-//             $cards = $this.find('.card'),
-//             $current = $cards.filter('.card--current'),
-//             $next;
+    // Add cities to the datalist
+    Object.keys(cityData).forEach(country => {
+        cityData[country].forEach(city => {
+            const option = document.createElement("option");
+            option.value = city;
+            option.dataset.country = country; // Store country info in data attribute
+            cityList.appendChild(option);
+        });
+    });
+}
 
-//         $cards.on('click', function () {
-//             if (!$current.is(this)) {
-//                 $cards.removeClass('card--current card--out card--next');
-//                 $current.addClass('card--out');
-//                 $current = $(this).addClass('card--current');
-//                 $next = $current.next();
-//                 $next = $next.length ? $next : $cards.first();
-//                 $next.addClass('card--next');
-//             }
-//         });
+function setDefaultCity() {
+    const cityInput = document.getElementById("city");
+    if (!cityInput.value) {
+        cityInput.value = "Cairo";
+        getThePrayerTime();
+    }
+}
 
-//         if (!$current.length) {
-//             $current = $cards.last();
-//             $cards.first().trigger('click');
-//         }
+function getSelectedLocation() {
+    const cityInput = document.getElementById("city");
+    const selectedCity = cityInput.value;
+    const options = document.querySelectorAll("#city-list option");
 
-//         $this.addClass('cards--active');
+    let country = "Unknown";
+    options.forEach(option => {
+        if (option.value === selectedCity) {
+            country = option.dataset.country; // Retrieve country from data attribute
+        }
+    });
 
-//     })
+    return { city: selectedCity, country: country };
+}
 
-// };
+function convertTo12HourFormat(hour24, minute) {
+    const isPM = hour24 >= 12;
+    let hour12 = hour24 % 12;
+    hour12 = hour12 === 0 ? 12 : hour12; // Handle the special case for 12 AM and 12 PM
 
-// $('.cards').commentCards();
+    return `${hour12}:${minute.toString().padStart(2, '0')}${isPM ? ' PM' : ' AM'}`;
+}
+
+function addMinutesToTime(time24, minutesToAdd) {
+    const [hour24, minute] = time24.split(':').map(Number);
+    let newHour = hour24;
+    let newMinute = minute + minutesToAdd;
+
+    if (newMinute >= 60) {
+        newMinute -= 60;
+        newHour += 1;
+    }
+
+    if (newHour >= 24) {
+        newHour -= 24;
+    }
+
+    return { hour: newHour, minute: newMinute };
+}
+
+function getThePrayerTime() {
+    const location = getSelectedLocation();
+    const url = `http://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(location.city)}&country=${encodeURIComponent(location.country)}`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            try {
+                if (data.code !== 200) {
+                    throw new Error('API error: ' + (data.status || 'Unknown error'));
+                }
+
+                const timings = data.data.timings;
+                console.log('Prayer Times:', timings);
+
+                displayAzanTime(timings);
+                displayPrayerTime(timings);
+                highlightNextPrayerTime(timings);
+            } catch (e) {
+                console.error('Data processing error:', e.message);
+            }
+        })
+        .catch(error => {
+            console.error('Fetch error:', error.message);
+        });
+}
+
+function displayAzanTime(timings) {
+    const azanTimeContainers = document.querySelectorAll(".azan-time");
+    azanTimeContainers.forEach(container => {
+        const azanName = container.getAttribute('prayerName');
+        if (timings[azanName]) {
+            const [hour24, minute] = timings[azanName].split(':').map(Number);
+            container.innerHTML = convertTo12HourFormat(hour24, minute);
+        } else {
+            container.innerHTML = 'N/A'; // Handle cases where the prayer name is not found
+        }
+    });
+}
+
+function displayPrayerTime(timings) {
+    const prayerTimeContainers = document.querySelectorAll(".prayer-time");
+    prayerTimeContainers.forEach(container => {
+        const azanName = container.getAttribute('prayerName');
+        if (timings[azanName]) {
+            let time24 = timings[azanName];
+            if (azanName === 'Maghrib') {
+                const { hour, minute } = addMinutesToTime(time24, 5);
+                container.innerHTML = convertTo12HourFormat(hour, minute);
+            } else {
+                const { hour, minute } = addMinutesToTime(time24, 15);
+                container.innerHTML = convertTo12HourFormat(hour, minute);
+            }
+        } else {
+            container.innerHTML = 'N/A'; // Handle cases where the prayer name is not found
+        }
+    });
+}
+
+function highlightNextPrayerTime(timings) {
+    const currentTime = new Date();
+    const prayerTimes = [];
+
+    for (const [prayerName, time] of Object.entries(timings)) {
+        const [hour, minute] = time.split(':').map(Number);
+        const prayerTime = new Date(currentTime);
+        prayerTime.setHours(hour);
+        prayerTime.setMinutes(minute);
+        prayerTimes.push({ prayerName, prayerTime });
+    }
+
+    prayerTimes.sort((a, b) => a.prayerTime - b.prayerTime);
+
+    const nextPrayer = prayerTimes.find(prayer => prayer.prayerTime > currentTime) || prayerTimes[0];
+
+    const rows = document.querySelectorAll("tr");
+    rows.forEach(row => {
+        row.classList.remove("highlight");
+        const prayerNameElement = row.querySelector("td[prayerName]");
+        if (prayerNameElement && prayerNameElement.getAttribute('prayerName') === nextPrayer.prayerName) {
+            row.classList.add("highlight");
+        }
+    });
+}

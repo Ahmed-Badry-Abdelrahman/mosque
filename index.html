@@ -71,10 +71,16 @@
                 <div class="select-location-content">
                     <div class="header">
                         <h2>Prayer Timing</h2>
-                        <button>
-                            <span>Select Location</span>
-                            <i class="fa-solid fa-caret-down"></i>
-                        </button>
+
+                        <div class="dropdown-container">
+                            <input type="text" id="city" list="city-list" placeholder="Type or select a city"
+                                onchange="getThePrayerTime()"/>
+                            <datalist id="city-list">
+                                <!-- Cities will be dynamically added here -->
+                            </datalist>
+
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -115,35 +121,29 @@
                                             <img src="./img/meteocons--sunrise-fill.png" alt="meteocons--sunrise-fill">
                                             <span id="name-of-salat">Fajir</span>
                                         </td>
-                                        <td class="azan-time">
-                                            03:30pm
+                                        <td class="azan-time" prayerName = 'Fajr'>
                                         </td>
-                                        <td class="prayer-time">
-                                            03:30pm
+                                        <td class="prayer-time" prayerName = 'Fajr'>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="name-of-salat">
                                             <img src="./img/meteocons--time-late-afternoon-fill.png" alt="afternoon">
-                                            <span id="name-of-salat">Othuhr</span>
+                                            <span id="name-of-salat">Dhuhr</span>
                                         </td>
-                                        <td class="azan-time">
-                                            03:30pm
+                                        <td class="azan-time" prayerName = 'Dhuhr'>
                                         </td>
-                                        <td class="prayer-time">
-                                            03:30pm
+                                        <td class="prayer-time" prayerName = 'Dhuhr'>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="name-of-salat">
                                             <img src="./img/meteocons--time-late-afternoon.png" alt="meteocons--sunset">
-                                            <span id="name-of-salat">Asar</span>
+                                            <span id="name-of-salat">Asr</span>
                                         </td>
-                                        <td class="azan-time">
-                                            03:30pm
+                                        <td class="azan-time"  prayerName = 'Asr'>
                                         </td>
-                                        <td class="prayer-time">
-                                            03:30pm
+                                        <td class="prayer-time" prayerName = 'Asr'>
                                         </td>
                                     </tr>
                                     <tr>
@@ -152,11 +152,9 @@
                                             <img src="./img/meteocons--sunset-fill.png" alt="afternoon">
                                             <span id="name-of-salat">Maghrib</span>
                                         </td>
-                                        <td class="azan-time">
-                                            03:30pm
+                                        <td class="azan-time" prayerName = 'Maghrib'>
                                         </td>
-                                        <td class="prayer-time">
-                                            03:30pm
+                                        <td class="prayer-time" prayerName = 'Maghrib'>
                                         </td>
                                     </tr>
                                     <tr>
@@ -164,25 +162,11 @@
                                             <img src="./img/openmoji--crescent-moon.png" alt="moon">
                                             <span id="name-of-salat">Isha</span>
                                         </td>
-                                        <td class="azan-time">
-                                            03:30pm
+                                        <td class="azan-time" prayerName = 'Isha'>
                                         </td>
-                                        <td class="prayer-time">
-                                            03:30pm
+                                        <td class="prayer-time" prayerName = 'Isha'>
                                         </td>
                                     </tr>
-                                    <!-- <tr>
-                                        <td class="name-of-salat">
-                                            <i></i>
-                                            <span id="name-of-salat">fajir</span>
-                                        </td>
-                                        <td class="azan-time">
-                                            03:30pm
-                                        </td>
-                                        <td class="prayer-time">
-                                            03:30pm
-                                        </td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
