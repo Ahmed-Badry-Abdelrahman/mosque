@@ -656,9 +656,29 @@ section.landing .right img {
     z-index: 100;
 }
 
-.highlight td:first-child { 
-    background-color: yellow !important; /* or any color you prefer */
+.highlight td:first-child {
+    position: relative;
+    overflow: hidden; 
+    color: #000000;
+    font-size: 20px;
+    z-index: 2;
+    font-weight: 700;
 }
+
+.highlight td:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/pngtree-beautiful-island.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
 
 /* Small Mobile Devices (Portrait) */
 @media (max-width: 480px) {
